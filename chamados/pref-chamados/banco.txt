@@ -1,0 +1,55 @@
+db_pref_services {
+    -tb_user {
+        user_id [int]
+        user_name [varchar_255]
+        user_email [varchar_255]
+        user_password [varchar_255]
+        user_type [varchar_255]
+        user_is_admin [bool]
+        user_dt_register [timestamp] 
+        user_dt_lastupdate [timestamp] 
+    }
+
+    -tb_computer{
+        computer_id [int]
+        user_register_id [int]
+        computer_sector [varchar_255]
+        computer_patrimony [int]
+        computer_ip [varchar_255]
+        computer_user_name [int]
+        computer_user_registration [int]
+        computer_soc [varchar_255]
+        computer_mem [varchar_255]
+        computer_video_card [varchar_255]
+        computer_network_card [varchar_255]
+        computer_hd [varchar_255]
+        computer_hd_type [varchar_255] #SSD ou HD
+        computer_state [varchar_255]
+        computer_dt_register [timestamp]
+        computer_dt_last_update [timestamp]
+    }
+    -tb_os_computer{
+        os_id [int]
+        computer_id [int]
+        user_technical_one_id [int]
+        user_technical_two_id [int]
+        user_technical_thre_id [int]
+        os_defect [varchar_255]
+        os_observation [varchar_255]
+        os_dt_register [timestamp]
+        os_dt_last_update [timestamp]
+        os_dt_conclusion [timestamp] #data de conclusão do serviço
+    }
+
+    -tb_call {
+        call_id [int]
+        user_technical_one_id [int]
+        user_technical_two_id [int]
+        user_technical_thre_id [int]
+        call_issue [varchar_255]
+        call_sector [varchar_255]
+        call_caller [varchar_255]
+        call_dt_register [timestamp]
+        call_dt_conclusion [timestamp]
+    }
+}
